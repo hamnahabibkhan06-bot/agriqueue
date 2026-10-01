@@ -1,0 +1,4 @@
+@php
+$map = ['booked'=>'bg-sky-100 text-sky-800','checked_in'=>'bg-amber-100 text-amber-800','waiting'=>'bg-amber-200 text-amber-900','weighing'=>'bg-indigo-100 text-indigo-800','quality_check'=>'bg-purple-100 text-purple-800','unloading'=>'bg-orange-100 text-orange-800','payment_pending'=>'bg-yellow-100 text-yellow-900','completed'=>'bg-green-100 text-green-800','cancelled'=>'bg-stone-200 text-stone-700','missed'=>'bg-red-100 text-red-800','rejected'=>'bg-red-200 text-red-900','delayed'=>'bg-orange-200 text-orange-900','paid'=>'bg-green-100 text-green-800','pending'=>'bg-yellow-100 text-yellow-900','accepted'=>'bg-green-100 text-green-800'];
+@endphp
+<span class="inline-block rounded-full px-2.5 py-0.5 text-xs font-bold {{ $map[$s] ?? 'bg-stone-100 text-stone-700' }}">{{ ucwords(str_replace('_',' ',$s)) }}</span>
