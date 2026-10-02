@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: agriqueue
+    env: php
+    buildCommand: composer install --no-dev --optimize-autoloader
+    startCommand: apache2-foreground
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: LOG_CHANNEL
+        value: stderr
